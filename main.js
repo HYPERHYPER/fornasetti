@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  console.log('running');
-
   let totalDelay = 0;
   const firstDelay = 1000;
   const popDuration = 400;
@@ -29,11 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const animation = anime(chatAnimation);
 
 
-  function c(...n) {
-    console.log(...n);
-  }
-
-
   let ran = null;
   let lastStarted = null;
 
@@ -41,8 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     const currentRunning = anim.animations.filter((a) => a.currentValue > 0).length;
-    // if (!currentRunning) return;
-    // c(currentRunning)
 
     if (currentRunning && currentRunning !== ran) {
 
@@ -59,13 +50,13 @@ document.addEventListener("DOMContentLoaded", function() {
         duration: 600,
         opacity: [0, 1],
         easing: 'easeOutCubic',
-        delay:  popDuration + 100
+        delay:  popDuration + 50
       })
 
+      // if content overflows, animate container
       if (box.right > window.innerWidth) {
         const windowTop = container.style.left ? parseFloat(container.style.left.match(/\d+/)[0]) : 0;
         const marginBottom = window.getComputedStyle(lastStarted).marginBottom ? parseFloat(window.getComputedStyle(lastStarted).marginBottom.match(/\d+/)[0]) : 0;
-        c(box, lastStarted)
         anime({
           targets: container,
           duration: 300,
@@ -76,12 +67,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
+    // When last animation finishes, restart
     if (currentRunning === anim.animations.length && anim.animations.slice(-1)[0].currentValue === 1) {
       animation.pause();
-      c('here');
       setTimeout(
         () => {
-          c('here');
           animation.restart();
           container.style.left = null;
         },

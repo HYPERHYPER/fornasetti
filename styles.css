@@ -55,6 +55,7 @@ b {
 /* ///// STYLES ///// */
 
 :root {
+	--color-white: #FFFFFF;
 	--color-black: #0d0d0d;
 	--color-grey-coal: #979797;
 	--color-grey-ash: #dedede;
@@ -65,25 +66,39 @@ body {
 	position: relative;
 }
 
-.container {
-	box-sizing: border-box;
-	padding: 30px 30px 0;
-	position: absolute;
-	width: 100vh;
-	transform-origin: top left;
-	left:  0;
-	top:  100vh;
-	transform: rotateZ(-90deg);
-}
 
 h1, h2, h3, h4, p, span, article, div {
 	font-family: 'SeroOT', sans-serif;
 	color:  var(--color-black);
 }
 
-h1, h2 {
+h1, h2, .lot {
 	font-size:  55px;
 }
+
+.header,
+.container {
+	box-sizing: border-box;
+	transform-origin: top left;
+	transform: rotateZ(-90deg);
+	width: 100vh;
+	top:  100vh;
+	left:  0;
+}
+
+.container {
+	padding: 300px 30px 0;
+	position: absolute;
+}
+
+.header {
+    position: fixed;
+    padding: 30px 30px 0;
+    background: var(--color-white);
+    z-index: 1;
+}
+
+
 
 .bold {
 	font-weight: bold;
