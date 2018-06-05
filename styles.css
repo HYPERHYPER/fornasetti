@@ -248,8 +248,8 @@ br {
 	font-style: italic;
 	margin: 0px 55px;
 	margin-bottom: 60px;	
-	font-size: 55px;
-	line-height: 60px;
+	font-size: 45px;
+	line-height: 55px;
 	/*align-self: flex-end;*/
 	transform-origin: bottom right;
 }
