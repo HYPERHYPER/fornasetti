@@ -219,7 +219,7 @@ br {
 	/*border: 2px solid var(--color-grey-coal);*/
 	margin-bottom:  45px;
 	border-radius:  24px;
-	line-height: 60px;
+	line-height: 55px;
 	max-width: 94%;
 	box-sizing: border-box;
 	transform:  scale(0);
@@ -248,8 +248,8 @@ br {
 	font-style: italic;
 	margin: 0px 55px;
 	margin-bottom: 60px;	
-	font-size: 50px;
-	line-height: 70px;
+	font-size: 55px;
+	line-height: 60px;
 	/*align-self: flex-end;*/
 	transform-origin: bottom right;
 }
