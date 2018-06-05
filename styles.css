@@ -142,7 +142,7 @@ br {
 .cover-header,
 .header {
     position: fixed;
-    padding: 30px 30px 30px 30px;
+    padding: 30px 30px 45px 30px;
     /* broder: 1opx; */
   	/* background: var(--color-white); */
 	background-image: linear-gradient(0deg, rgba(255,255,255,0.0) 0%, #FFF 20%);
