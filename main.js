@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const marginBottom = window.getComputedStyle(lastStarted).marginBottom ? parseFloat(window.getComputedStyle(lastStarted).marginBottom.match(/\d+/)[0]) : 0;
         anime({
           targets: container,
-          duration: 300,
+          duration: 500,
           left: (box.right + windowTop + marginBottom - window.innerWidth) * -1,
           easing: 'easeInOutQuart',
         });
