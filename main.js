@@ -1,9 +1,33 @@
 document.addEventListener("DOMContentLoaded", function() {
 
   let totalDelay = 0;
-  const firstDelay = 1000;
-  const popDuration = 400;
-  const defaultDelayBetweenSlides = 3000;
+  const firstDelay = 9000;
+  const popDuration = 600;
+  const defaultDelayBetweenSlides = 8000;
+  const coverDuration = 8000;
+
+  const coverAnimation = {
+    targets: '#cover .slide',
+    translateX: -781,
+    duration: coverDuration,
+    easing: 'linear',
+    elasticity: 0,
+
+  }
+
+  const cover = anime(coverAnimation)
+  
+  cover.complete = function(anim) {
+      anime({
+        targets: '#cover',
+        duration: 800,
+        opacity: [1, 0],
+        easing: 'easeInOutQuart',
+      });
+
+
+  }
+
 
   const container = document.querySelector('.container');
 
@@ -25,19 +49,24 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
+
   const animation = anime(chatAnimation);
+
 
 
   let ran = null;
   let lastStarted = null;
-
+  let coverVisible = true;
   animation.update = function(anim) {
 
 
     const currentRunning = anim.animations.filter((a) => a.currentValue > 0).length;
 
+
     // If a new item is animating
     if (currentRunning && currentRunning !== ran) {
+
+      if(coverVisible) console.log("cover");
 
       // save the number of animations that have started running in total
       ran = currentRunning;
@@ -75,11 +104,17 @@ document.addEventListener("DOMContentLoaded", function() {
       animation.pause();
       setTimeout(
         () => {
+          anime({
+            targets: '#cover',
+            duration: 2000,
+            opacity: [0, 1],
+            easing: 'easeInOutQuart',
+          });
+          cover.restart();
           animation.restart();
           container.style.left = null;
         },
-        // defaultDelayBetweenSlides - firstDelay
-        2000
+        defaultDelayBetweenSlides
       )
     }
 
