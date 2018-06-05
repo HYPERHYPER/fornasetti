@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
     easing: 'easeInOutQuart',
     delay: function(el, i, l) {
 
-      if (i === 0) return firstDelay;
-
       const customDelay = el.dataset.delay;
 
-      totalDelay = customDelay ? totalDelay  + parseInt(customDelay) : totalDelay + defaultDelayBetweenSlides;
+      totalDelay = customDelay ? totalDelay + parseInt(customDelay) : totalDelay + defaultDelayBetweenSlides;
+
+      if (i === 0) totalDelay = firstDelay;
 
       return totalDelay;
     }
