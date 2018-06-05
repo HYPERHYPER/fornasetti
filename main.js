@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     targets: '.bubble',
     scale: [0, 1],
     duration: popDuration,
+    autoplay: true,
     easing: 'easeInOutQuart',
     delay: function(el, i, l) {
 
@@ -35,8 +36,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const currentRunning = anim.animations.filter((a) => a.currentValue > 0).length;
 
+    // If a new item is animating
     if (currentRunning && currentRunning !== ran) {
 
+      // save the number of animations that have started running in total
       ran = currentRunning;
       const index = ran - 1;
 
@@ -67,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    // When last animation finishes, restart
+    // When last animation finishes, wait a bit and restart
     if (currentRunning === anim.animations.length && anim.animations.slice(-1)[0].currentValue === 1) {
       animation.pause();
       setTimeout(
