@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   let totalDelay = 0;
   const firstDelay = 9000;
-  const popDuration = 600;
+  const popDuration = 800;
   const defaultDelayBetweenSlides = 8000;
   const coverDuration = 8000;
 
