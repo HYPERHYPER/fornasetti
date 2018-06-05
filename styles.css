@@ -94,9 +94,8 @@ br {
 }
 #cover .text {
 	width:100vw;
-
-	top: 0px;
-	left: 0;
+	height: 100vh;
+	left: 0px;
 	position: absolute;
 	/*display: none;*/
 	z-index: 100;
@@ -121,7 +120,7 @@ br {
 }
 
 .container {
-	padding: 300px 0px 0;
+	padding: 300px 0px 0px;
 	position: absolute;
 }
 
@@ -258,6 +257,6 @@ br {
 	width:  100%;
 }
 
-.poster {
-	width: 50%;
+.last {
+	margin-bottom: 0;
 }
