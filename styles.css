@@ -77,7 +77,7 @@ h1, h2, .lot {
 }
 
 br {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 .fullscreen {
@@ -217,7 +217,7 @@ br {
 	padding: 45px;
 	font-size:  32px;
 	/*border: 2px solid var(--color-grey-coal);*/
-	margin-bottom:  45px;
+	margin-bottom:  40px;
 	border-radius:  24px;
 	line-height: 50px;
 	max-width: 94%;
@@ -248,8 +248,8 @@ br {
 	font-style: italic;
 	margin: 0px 55px;
 	margin-bottom: 60px;	
-	font-size: 35px;
-	line-height: 55px;
+	font-size: 33px;
+	line-height: 53px;
 	/*align-self: flex-end;*/
 	transform-origin: bottom right;
 }
