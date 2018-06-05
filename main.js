@@ -1,5 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+  document.querySelector('.fullscreen').addEventListener('click', (e) => {
+    if (screenfull.enabled) {
+      screenfull.toggle();
+    } else {
+      videoPlayer.webkitEnterFullScreen();
+    }
+
+    e.target.style.display = 'none';
+  })
+
+
   let totalDelay = 0;
   const firstDelay = 9000;
   const popDuration = 600;
@@ -24,8 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
         opacity: [1, 0],
         easing: 'easeInOutQuart',
       });
-
-
   }
 
 

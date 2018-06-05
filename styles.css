@@ -79,6 +79,21 @@ h1, h2, .lot {
 br {
 	margin-bottom: 20px;
 }
+
+.fullscreen {
+	position: fixed;
+	z-index: 20;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	font-size: 55px;
+	font-weight: bold;
+	background: var(--color-white);
+	color: var(--color-black);
+	opacity: 0.9;
+}
+
 #cover {
 	/*left: 0;*/
 	/*transform-origin: top left;*/
