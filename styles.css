@@ -137,7 +137,7 @@ br {
 
 .cover-header h1,
 .header h1 {
-	font-size: 48px;
+	font-size: 40px;
 	margin:0;
 	margin-top: 10px;
 	margin-left: 5px;
@@ -153,7 +153,7 @@ br {
 
 .cover-header h2,
 .header h2 {
-	font-size: 55px;
+	font-size: 45px;
 	margin:0;
 	margin-top: 75px;
 	font-family: 'Portrait Regular', serif;
@@ -178,7 +178,7 @@ br {
 
 .date {
 	font-family: 'SeroOT', sans-serif;
-	font-size: 40px;
+	font-size: 35px;
 }
 
 .title {
@@ -200,7 +200,7 @@ br {
 
 .bubble {
 	padding: 50px;
-	font-size:  45px;
+	font-size:  36px;
 	/*border: 2px solid var(--color-grey-coal);*/
 	margin-bottom:  45px;
 	border-radius:  24px;
