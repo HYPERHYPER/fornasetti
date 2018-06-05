@@ -142,10 +142,10 @@ br {
 .cover-header,
 .header {
     position: fixed;
-    padding: 30px 30px 45px 30px;
+    padding: 30px 30px 50px 30px;
     /* broder: 1opx; */
   	/* background: var(--color-white); */
-	background-image: linear-gradient(0deg, rgba(255,255,255,0.0) 0%, #FFF 20%);
+	background-image: linear-gradient(0deg, rgba(255,255,255,0.0) 0%, #FFF 35%);
     z-index: 1;
 }
 
@@ -170,7 +170,7 @@ br {
 .header h2 {
 	font-size: 40px;
 	margin:0;
-	margin-top: 40px;
+	margin-top: 50px;
 	font-family: 'Portrait Regular', serif;
 	font-style: italic;
 }
